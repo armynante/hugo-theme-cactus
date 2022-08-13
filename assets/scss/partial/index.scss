@@ -1,3 +1,41 @@
+.blockquote {
+	max-width: 600px;
+	line-height: 1.4;
+	position: relative;
+	margin: 0;
+	padding: .5rem;
+  margin-top: 40px;
+  font-style: italic;
+}
+
+.blockquote:before,
+.blockquote:after {
+	position: absolute;
+	color: #f1efe6;
+	font-size: 2rem;
+	width: 2rem;
+	height: 2rem;
+}
+
+.blockquote:before {
+	content: '“';
+	left: -1rem;
+	top: -0rem;
+}
+
+.blockquote:after {
+	content: '”';
+	right: 2rem;
+	bottom: 2.5rem;
+}
+
+.cite {
+	line-height: 3;
+  margin-top: 20px;
+	text-align: left;
+  font-weight: bold;
+}
+
 .post-list {
   padding: 0;
 

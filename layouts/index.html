@@ -3,8 +3,19 @@
   {{ if isset .Site.Params "description" }}
     {{ .Site.Params.description | $.Page.RenderString }}
   {{ end }}
+  <section class="blockquote">
+  {{ if isset .Site.Params "biblical" }}
+    {{ .Site.Params.biblical | $.Page.RenderString }}
+    {{ .Site.Params.cite | $.Page.RenderString }}
+  {{ end }}
+  <span class="cite">
+  {{ if isset .Site.Params "cite" }}
+    {{ .Site.Params.cite | $.Page.RenderString }}
+  {{ end }}
+  </span>
+  </section>
   {{ if isset .Site.Params "social" }}
-      <p>Find me on
+      <p>Find us
       {{ $length := (len .Site.Params.social) }}
       {{ range $index, $elem := .Site.Params.social}}
       {{ if eq $elem.name "email" }}
